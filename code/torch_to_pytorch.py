@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 from torch.autograd import Variable
 from torch.utils.serialization import load_lua
-
+#import torchfile
 
 class LambdaBase(nn.Sequential):
     def __init__(self, fn, *args):
@@ -264,6 +264,7 @@ def simplify_source(s):
 
 def torch_to_pytorch(t7_filename, outputname=None):
     model = load_lua(t7_filename, unknown_classes=True)
+    #model = torchfile.load(t7_filename)
     if type(model).__name__ == 'hashable_uniq_dict': model = model.model
     model.gradInput = None
     slist = lua_recursive_source(torch.legacy.nn.Sequential().add(model))

@@ -13,8 +13,14 @@ from os.path import join as pjoin
 ###########################################################
 
 # TODO Dear user, please change these paths:
-IMAGENET_PATH = "/gpfs01/bethge/data/imagenet-raw/raw-data/" # TODO specify ImageNet path
-STYLIZED_IMAGENET_PATH = "/gpfs01/bethge/data/imagenet-styletransfer-v2/" # TODO specify target path: where should Stylized-ImageNet be stored?
+#IMAGENET_PATH = "/gpfs01/bethge/data/imagenet-raw/raw-data/" # TODO specify ImageNet path
+#STYLIZED_IMAGENET_PATH = "/gpfs01/bethge/data/imagenet-styletransfer-v2/" # TODO specify target path: where should Stylized-ImageNet be stored?
+
+IMAGENET_PATH = "/home/robtu/Github/data/ILSVRC/Data/DET" # TODO specify ImageNet path
+
+
+STYLIZED_IMAGENET_PATH = "/home/robtu/Github/Stylized-Imagenet/code/paintings_stylized/" # TODO specify target path: where should Stylized-ImageNet be stored?
+
 
 
 ###########################################################
@@ -22,19 +28,25 @@ STYLIZED_IMAGENET_PATH = "/gpfs01/bethge/data/imagenet-styletransfer-v2/" # TODO
 ###########################################################
 
 IMG_SIZE = 224
-ADAIN_RAW_PAINTINGS_DIR = "./paintings_raw/"
+ADAIN_RAW_PAINTINGS_DIR = "./paintings_raw/train/"
 ADAIN_EXCLUDED_PAINTINGS_DIR = "./paintings_excluded/"
 ADAIN_PREPROCESSED_PAINTINGS_DIR = "./paintings_preprocessed/"
 
 ADAIN_MODEL_DIR = "./models/"
 ADAIN_VGG_PATH = pjoin(ADAIN_MODEL_DIR, "vgg_normalised.pth")
 ADAIN_DECODER_PATH = pjoin(ADAIN_MODEL_DIR, "decoder.pth")
+#ADAIN_VGG_PATH = pjoin(ADAIN_MODEL_DIR, "vgg_normalised.t7")
+#ADAIN_DECODER_PATH = pjoin(ADAIN_MODEL_DIR, "decoder.t7")
 
 
+
+print (ADAIN_VGG_PATH)
+print (ADAIN_DECODER_PATH)
 assert os.path.exists(ADAIN_VGG_PATH)
 assert os.path.exists(ADAIN_DECODER_PATH)
 assert os.path.exists(IMAGENET_PATH)
-assert os.path.exists(pjoin(IMAGENET_PATH, "train/"))
+#assert os.path.exists(pjoin(IMAGENET_PATH, "train/"))
+assert os.path.exists(pjoin(IMAGENET_PATH, "train/ILSVRC2013_train/"))
 assert os.path.exists(pjoin(IMAGENET_PATH, "val/"))
 
 

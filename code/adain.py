@@ -20,7 +20,7 @@ from abc import ABC, abstractmethod
 import general as g
 import net
 from function import adaptive_instance_normalization
-
+from torch.utils.serialization import load_lua
 
 
 def crop_square_and_downsample(img, downsize_size=(g.IMG_SIZE, g.IMG_SIZE)):

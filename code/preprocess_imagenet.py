@@ -44,7 +44,7 @@ def main():
     args = parser.parse_args()
 
     # Data loading code
-    traindir = os.path.join(g.IMAGENET_PATH, 'train')
+    traindir = os.path.join(g.IMAGENET_PATH, 'train/ILSVRC2013_train/')
     valdir = os.path.join(g.IMAGENET_PATH, 'val')
 
     #############################################################
@@ -105,15 +105,17 @@ def main():
                                   transforms.CenterCrop(g.IMG_SIZE),
                                   transforms.ToTensor()])
 
-    val_loader = MyDataLoader(root = valdir,
-                              transform = default_transforms,
-                              shuffle = False,
-                              sampler = None)
-
     train_loader = MyDataLoader(root = traindir,
                                 transform = default_transforms,
                                 shuffle = False,
                                 sampler = None)
+
+    #val_loader = MyDataLoader(root = valdir,
+    #                          transform = default_transforms,
+    #                          shuffle = False,
+    #                          sampler = None)
+
+
 
     print("=> Succesfully created all data loaders.")
     print("")
@@ -123,10 +125,10 @@ def main():
     #############################################################
 
     print("Preprocessing validation data:")
-    preprocess(data_loader = val_loader,
-               input_transforms = [style_transfer],
-               sourcedir = valdir,
-               targetdir = os.path.join(g.STYLIZED_IMAGENET_PATH, "val/"))
+   #preprocess(data_loader = val_loader,
+   #            input_transforms = [style_transfer],
+   #            sourcedir = valdir,
+   #            targetdir = os.path.join(g.STYLIZED_IMAGENET_PATH, "val/"))
 
     print("Preprocessing training data:")
     preprocess(data_loader = train_loader,
