@@ -19,7 +19,7 @@ As you can see, local textures are heavily distorted, while global object shapes
 3. go to ``code/`` and execute ``create_stylized_imagenet.sh`` (assuming access to a GPU). The easiest way for doing this is to the docker image that we provide (see Section below). This creates Stylized-ImageNet in the directory that you specified in step 2.
 4. Optionally, delete ``paintings_raw/``, ``paintings_excluded/`` and ``paintings_preprocessed/`` which are no longer needed.
 ## Usage comment by Robin
-Be careful to use the correct version of pyTorch and torchvision 
+Be careful to use the correct version of pyTorch and torchvision. 
 ImageNet should be put in path Github/data/data/ILSVRC2012/Data. Two subdirectories are train/ and val/
 
 
