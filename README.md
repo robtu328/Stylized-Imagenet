@@ -20,6 +20,7 @@ As you can see, local textures are heavily distorted, while global object shapes
 4. Optionally, delete ``paintings_raw/``, ``paintings_excluded/`` and ``paintings_preprocessed/`` which are no longer needed.
 ## Usage comment by Robin
 Be careful to use the correct version of pyTorch and torchvision. 
+
 ImageNet should be put in path Github/data/data/ILSVRC2012/Data. Two subdirectories are train/ and val/
 
 
