@@ -18,6 +18,10 @@ As you can see, local textures are heavily distorted, while global object shapes
 2. Get ImageNet images & set path. If you already have the ImageNet images, set the ``IMAGENET_PATH`` variable in ``code/general.py`` accordingly. If not, obtain the ImageNet images from the [ImageNet website](http://image-net.org/download-images) and store them somewhere locally, then set the variable. Note that the ImageNet images need to be split in two subdirectories, ``train/`` and ``val/`` (for training and validation images, respectively). In any case, also set the ``STYLIZED_IMAGENET_PATH`` variable (also in ``code/general.py``). This variable indicates the path where you would like to store the final dataset. Make sure you have enough disk space: In our setting, Stylized-ImageNet needs 134G of disk space (which is a bit less than standard ImageNet with 181G).
 3. go to ``code/`` and execute ``create_stylized_imagenet.sh`` (assuming access to a GPU). The easiest way for doing this is to the docker image that we provide (see Section below). This creates Stylized-ImageNet in the directory that you specified in step 2.
 4. Optionally, delete ``paintings_raw/``, ``paintings_excluded/`` and ``paintings_preprocessed/`` which are no longer needed.
+## Usage comment by Robin
+Be careful to use the correct version of pyTorch and torchvision 
+ImageNet should be put in path Github/data/data/ILSVRC2012/Data. Two subdirectories are train/ and val/
+
 
 ## Docker image
 We provide a docker image so that you don't have to install all of the libraries yourself here: [https://hub.docker.com/r/bethgelab/deeplearning/](https://hub.docker.com/r/bethgelab/deeplearning/). The repo is tested with ``bethgelab/deeplearning:cuda9.0-cudnn7``.
