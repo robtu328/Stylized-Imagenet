@@ -16,7 +16,7 @@ from os.path import join as pjoin
 #IMAGENET_PATH = "/gpfs01/bethge/data/imagenet-raw/raw-data/" # TODO specify ImageNet path
 #STYLIZED_IMAGENET_PATH = "/gpfs01/bethge/data/imagenet-styletransfer-v2/" # TODO specify target path: where should Stylized-ImageNet be stored?
 
-IMAGENET_PATH = "/home/robtu/Github/data/ILSVRC/Data/DET" # TODO specify ImageNet path
+IMAGENET_PATH = "/home/robtu/Github/data/ILSVRC2012/IN/" # TODO specify ImageNet path
 
 
 STYLIZED_IMAGENET_PATH = "/home/robtu/Github/Stylized-Imagenet/code/paintings_stylized/" # TODO specify target path: where should Stylized-ImageNet be stored?
@@ -46,7 +46,7 @@ assert os.path.exists(ADAIN_VGG_PATH)
 assert os.path.exists(ADAIN_DECODER_PATH)
 assert os.path.exists(IMAGENET_PATH)
 #assert os.path.exists(pjoin(IMAGENET_PATH, "train/"))
-assert os.path.exists(pjoin(IMAGENET_PATH, "train/ILSVRC2013_train/"))
+assert os.path.exists(pjoin(IMAGENET_PATH, "train/"))
 assert os.path.exists(pjoin(IMAGENET_PATH, "val/"))
 
 
